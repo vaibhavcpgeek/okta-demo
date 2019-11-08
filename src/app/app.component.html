@@ -1,0 +1,12 @@
+<h1 >
+  <img style="width:276px;height:155px;"
+       src="https://www.pega.com/sites/default/files/styles/640/public/media/images/2018-11/aegon-logo-color.png?itok=XQ4Xeu10">
+</h1>
+
+<div *ngIf="!user" id="okta-login-container"></div>
+
+<div *ngIf="user">
+  Hello {{user}}
+
+  <button (click)="logout()">Logout</button>
+</div>
