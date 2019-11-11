@@ -1,12 +1,18 @@
-<h1 >
-  <img style="width:276px;height:155px;"
-       src="https://www.pega.com/sites/default/files/styles/640/public/media/images/2018-11/aegon-logo-color.png?itok=XQ4Xeu10">
-</h1>
-
-<div *ngIf="!user" id="okta-login-container"></div>
-
-<div *ngIf="user">
-  Hello {{user}}
-
-  <button (click)="logout()">Logout</button>
-</div>
+<section>
+  <div class="bg-image">
+    <img
+      src="https://okta-demo-74648.s3.eu-west-2.amazonaws.com/Leadenhall.jpg"
+      alt="Background"
+    />
+  </div>
+  <div class="logo">
+    <img src="https://okta-demo-74648.s3.eu-west-2.amazonaws.com/logo.png" />
+  </div>
+  <div class="logged-out">
+    <div *ngIf="!user" id="okta-login-container"></div>
+  </div>
+  <div class="logged-in" *ngIf="user">
+    Hello {{ user }}
+    <button class="logout" (click)="logout()">Logout</button>
+  </div>
+</section>
